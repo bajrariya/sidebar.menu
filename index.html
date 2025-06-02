@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="app.js" defer></script>
+</head>
+<body>
+    <nav id="sidebar">
+        <ul>
+            <li>
+                <span class="logo">code2go</span>
+                <button onclick=toggleSidebar() id="toggle-btn">
+                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z"/></svg>
+            </li>
+            <li class="active">
+                <a href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+                <span>Home</span>
+                </a>
+                </li>
+            <li>
+            <a href="dashboard.html">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M520-600v-240h320v240H520ZM120-440v-400h320v400H120Zm400 320v-400h320v400H520Zm-400 0v-240h320v240H120Zm80-400h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z"/></svg>
+            <span>Dashboard</span>
+            </a>
+            </li>
+            <li>
+                <button onclick=toggleSubMenu(this) class="dropdown-btn"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M560-320h80v-80h80v-80h-80v-80h-80v80h-80v80h80v80ZM160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Z"/></svg>
+                <span>Create</span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-360 280-560h400L480-360Z"/></svg>
+                </button>
+                <ul class="sub-menu ">
+                    <div>
+                    <li><a href="#">Folder</a></li>
+                    <li><a href="#">Document</a></li>
+                    <li><a href="#">Project</a></li>
+                </div>
+                </ul>
+            </li>
+            <li>
+                <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h168q13-36 43.5-58t68.5-22q38 0 68.5 22t43.5 58h168q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm80-80h280v-80H280v80Zm0-160h400v-80H280v80Zm0-160h400v-80H280v80Zm200-190q13 0 21.5-8.5T510-820q0-13-8.5-21.5T480-850q-13 0-21.5 8.5T450-820q0 13 8.5 21.5T480-790ZM200-200v-560 560Z"/></svg>
+                <span>To-do list</span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-360 280-560h400L480-360Z"/></svg>
+                </button>
+                <ul class="sub-menu">
+                    <div>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Private</a></li>
+                    <li><a href="#">Coding</a></li>
+                    <li><a href="#">Gardening</a></li>
+                    <li><a href="#">School</a></li>
+                </div>
+                </ul>
+            </li>
+            <li>
+                <a href="calendar.html">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z"/></svg>
+                <span>Calendar</span>
+                </a>
+            </li>
+            <li>
+                <a href="profile.html">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
+                <span>Profile</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="container">
+            <h2>About Us</h2>
+            <P>Code2Go is a forward-thinking platform dedicated to empowering individuals with practical coding skills—anytime, anywhere. Whether you're a student, hobbyist, or aspiring developer, we make learning code accessible, fast, and fun.
+
+🚀 What We Do
+At Code2Go, we:
+
+Offer bite-sized coding lessons and real-world mini-projects.
+
+Help learners build hands-on experience through interactive tools.
+
+Create a community of coders who grow and share knowledge together.</P>
+        </div>
+        <div class="container">
+            <h2>Example Heading</h2>
+            <p>Code2Go is a modern platform built for aspiring developers and tech enthusiasts who want to learn, build, and grow on the go. We specialize in creating intuitive tools and bite-sized tutorials that make it easy to pick up coding skills—whether you're on a desktop or mobile.
+
+With a focus on practical learning, we aim to bridge the gap between theory and real-world application. At Code2Go, we believe coding is for everyone, and we’re here to make it fast, fun, and flexible.
+
+</p>
+        </div>
+         <div class="container">
+            <h2>Coding for everyone</h2>
+            <p>At Code2Go, we believe coding is for everyone, and we’re committed to making learning accessible regardless of your background or schedule. Our platform encourages collaboration through community forums and live coding events, where learners can connect, share ideas, and grow together. Using cutting-edge technology, we continuously innovate to deliver a seamless and personalized learning experience. Our mission is to empower millions worldwide to turn their ideas into reality, one line of code at a time.</p>
+        </div>
+    </main>
+    
+</body>
+</html>
